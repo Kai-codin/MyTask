@@ -1,0 +1,260 @@
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --secondary-text-color: #666;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --primary-color: #646cff;
+  --primary-hover: #535bf2;
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --warning-color: #ffc107;
+  --warning-hover: #e0a800;
+  --danger-color: #dc3545;
+  --danger-hover: #c82333;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --secondary-text-color: #cccccc;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --primary-color: #7c83ff;
+  --primary-hover: #646cff;
+  --success-color: #2ecc71;
+  --success-hover: #27ae60;
+  --warning-color: #f1c40f;
+  --warning-hover: #f39c12;
+  --danger-color: #e74c3c;
+  --danger-hover: #c0392b;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Login Form Styles */
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  background-color: var(--bg-color);
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form input {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.login-form button {
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Task List Styles */
+.tasks-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.task-form {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  margin-bottom: 2rem;
+}
+
+.task-form input,
+.task-form textarea {
+  width: calc(100% - 1.5rem);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.task-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.task-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+
+.task-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+.task-form button[type="button"] {
+  background-color: var(--danger-color);
+}
+
+.task-form button[type="button"]:hover {
+  background-color: var(--danger-hover);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  margin-bottom: 1rem;
+}
+
+.task-item h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.task-item p {
+  margin: 0.5rem 0;
+  color: var(--secondary-text-color);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.task-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.task-actions button:first-child {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.task-actions button:first-child:hover {
+  background-color: var(--success-hover);
+}
+
+.task-actions button:nth-child(2) {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+}
+
+.task-actions button:nth-child(2):hover {
+  background-color: var(--warning-hover);
+}
+
+.task-actions button:last-child {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.task-actions button:last-child:hover {
+  background-color: var(--danger-hover);
+}
+
+.message {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.message.error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.message.success {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(15deg);
+} 
