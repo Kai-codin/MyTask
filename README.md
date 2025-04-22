@@ -39,8 +39,8 @@ A modern task management application built with React and Node.js, featuring use
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/task-manager.git
-cd task-manager
+git clone https://github.com/Kai-codin/MyTask.git
+cd MyTask
 ```
 
 2. Install backend dependencies:
@@ -81,7 +81,7 @@ npm run dev
 ## Project Structure
 
 ```
-task-manager/
+MyTask/
 ├── backend/
 │   ├── index.js
 │   ├── database.db
