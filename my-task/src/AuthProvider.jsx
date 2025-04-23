@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const res = await fetch('http://localhost:3000/api/refresh-token', {
+      const res = await fetch('https://mytask.kaicoding.cc:3000/api/refresh-token', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
