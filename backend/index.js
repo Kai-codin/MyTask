@@ -18,7 +18,7 @@ const SQLiteStore = require('connect-sqlite3')(session);
 const jwt = require('jsonwebtoken');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 require('dotenv').config();
 
 app.use(

@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const res = await fetch(`http://${window.location.hostname}:3000/api/refresh-token`, {
+      const res = await fetch(`https://${window.location.hostname}/api/refresh-token`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

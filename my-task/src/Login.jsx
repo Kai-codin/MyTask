@@ -29,7 +29,7 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch(`http://${window.location.hostname}:3000/api/login`, {
+    const res = await fetch(`https://${window.location.hostname}/api/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
