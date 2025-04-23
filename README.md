@@ -57,7 +57,7 @@ npm install
 
 4. Create a `.env` file in the backend directory with the following variables:
 ```
-PORT=3001
+PORT=3000
 SESSION_SECRET=your-session-secret
 JWT_SECRET=your-jwt-secret
 ```

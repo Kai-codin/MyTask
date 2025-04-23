@@ -52,7 +52,7 @@ function Tasks() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/tasks', {
+        const res = await fetch('http://localhost:3000/api/tasks', {
           method: 'GET',
           headers: {
             ...getAuthHeader(),
@@ -89,7 +89,7 @@ function Tasks() {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3001/api/tasks', {
+      const res = await fetch('http://localhost:3000/api/tasks', {
         method: 'POST',
         headers: {
           ...getAuthHeader(),
@@ -105,7 +105,7 @@ function Tasks() {
         setForm({ task_name: '', task_description: '', due_by: '' });
 
         // Refresh tasks list
-        const refreshed = await fetch('http://localhost:3001/api/tasks', {
+        const refreshed = await fetch('http://localhost:3000/api/tasks', {
           headers: getAuthHeader(),
           credentials: 'include',
         }).then((res) => res.json());
@@ -122,7 +122,7 @@ function Tasks() {
 
   const handleCompleteTask = async (taskId) => {
     try {
-      const res = await fetch(`http://localhost:3001/api/tasks/${taskId}/complete`, {
+      const res = await fetch(`http://localhost:3000/api/tasks/${taskId}/complete`, {
         method: 'PUT',
         headers: getAuthHeader(),
         credentials: 'include',
@@ -130,7 +130,7 @@ function Tasks() {
 
       if (res.ok) {
         // Refresh tasks list
-        const refreshed = await fetch('http://localhost:3001/api/tasks', {
+        const refreshed = await fetch('http://localhost:3000/api/tasks', {
           headers: getAuthHeader(),
           credentials: 'include',
         }).then((res) => res.json());
@@ -148,7 +148,7 @@ function Tasks() {
 
   const handleUncompleteTask = async (taskId) => {
     try {
-      const res = await fetch(`http://localhost:3001/api/tasks/${taskId}/uncomplete`, {
+      const res = await fetch(`http://localhost:3000/api/tasks/${taskId}/uncomplete`, {
         method: 'PUT',
         headers: getAuthHeader(),
         credentials: 'include',
@@ -156,7 +156,7 @@ function Tasks() {
 
       if (res.ok) {
         // Refresh tasks list
-        const refreshed = await fetch('http://localhost:3001/api/tasks', {
+        const refreshed = await fetch('http://localhost:3000/api/tasks', {
           headers: getAuthHeader(),
           credentials: 'include',
         }).then((res) => res.json());
@@ -176,7 +176,7 @@ function Tasks() {
     if (!window.confirm('Are you sure you want to delete this task?')) return;
 
     try {
-      const res = await fetch(`http://localhost:3001/api/tasks/${taskId}`, {
+      const res = await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
         method: 'DELETE',
         headers: getAuthHeader(),
         credentials: 'include',
@@ -184,7 +184,7 @@ function Tasks() {
 
       if (res.ok) {
         // Refresh tasks list
-        const refreshed = await fetch('http://localhost:3001/api/tasks', {
+        const refreshed = await fetch('http://localhost:3000/api/tasks', {
           headers: getAuthHeader(),
           credentials: 'include',
         }).then((res) => res.json());
@@ -214,7 +214,7 @@ function Tasks() {
     if (!editingTask) return;
 
     try {
-      const res = await fetch(`http://localhost:3001/api/tasks/${editingTask.id}`, {
+      const res = await fetch(`http://localhost:3000/api/tasks/${editingTask.id}`, {
         method: 'PUT',
         headers: {
           ...getAuthHeader(),
@@ -226,7 +226,7 @@ function Tasks() {
 
       if (res.ok) {
         // Refresh tasks list
-        const refreshed = await fetch('http://localhost:3001/api/tasks', {
+        const refreshed = await fetch('http://localhost:3000/api/tasks', {
           headers: getAuthHeader(),
           credentials: 'include',
         }).then((res) => res.json());
